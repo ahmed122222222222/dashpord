@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:resposive/view/dachbordview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,14 +17,5 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-   @override
-  Widget build(BuildContext context) {
-  return const Scaffold(
-   
-  );
-  }
-}
 
 
