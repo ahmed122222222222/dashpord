@@ -27,7 +27,7 @@ abstract class AppStyles {
       color: const Color(0xFF064061),
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
     );
   }
 
@@ -36,7 +36,7 @@ abstract class AppStyles {
       color: const Color(0xFFFFFFFF),
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'Montserrat',
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
     );
   }
 

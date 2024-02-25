@@ -19,10 +19,9 @@ class _drweriteamListviewState extends State<drweriteamListview> {
   int active = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
         itemCount: widget.Iteam.length,
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
+
         itemBuilder: (context, index) => GestureDetector(
             onTap: () {
               if (active != index) {

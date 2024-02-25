@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resposive/core/utiles/image.dart';
 import 'package:resposive/model/Listtilemodel.dart';
+import 'package:resposive/view/widget/activeandnotactive.dart';
 import 'package:resposive/view/widget/customlisttitel.dart';
 import 'package:resposive/view/widget/drweriteamlistview.dart';
 
@@ -19,21 +20,35 @@ class _BodyContinerState extends State<BodyContiner> {
     Listtilemodel(data: "Statistics", image: Assets.imageStatistics),
     Listtilemodel(data: "Wallet Account", image: Assets.imageWalletAccount),
     Listtilemodel(data: "My Investments", image: Assets.imageMyInvestments),
+  
+    
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CustomListtile(
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(
+          child: CustomListtile(
           data: 'Lekan Okeowo',
           data1: 'demo@gmail.com',
           image: Assets.imageAvatar3,
         ),
-        const SizedBox(
-          height: 8,
         ),
-        drweriteamListview(Iteam: Iteam)
+        
+        drweriteamListview(Iteam: Iteam),
+       SliverFillRemaining(
+        hasScrollBody: false,
+        child: Column(
+          children: [
+             const Expanded(child: SizedBox(
+              height: 20,
+             )),
+       NotActive(model:   Listtilemodel(data: "seting", image: Assets.imageSettings)),
+       NotActive(model:   Listtilemodel(data: "log out", image: Assets.imageLogout))
+          ],
+        ),
+       )
       ],
     );
   }
