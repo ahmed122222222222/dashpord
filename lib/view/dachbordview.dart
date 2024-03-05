@@ -10,7 +10,7 @@ class MyHomePage extends StatelessWidget {
       body: AdaptiveUi(
           MobileLauyOut: (context) => SizedBox(),
           TabletLayOut: (context) => SizedBox(),
-          DeskTopLayOut: (context) => DeskTopLayOut()),
+          DeskTopLayOut: (context) => const DeskTopLayOut()),
     );
   }
 }

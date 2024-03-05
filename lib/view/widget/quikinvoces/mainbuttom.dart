@@ -15,6 +15,7 @@ class activebuttom extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xff4EB7F2),
             elevation: 0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12))),

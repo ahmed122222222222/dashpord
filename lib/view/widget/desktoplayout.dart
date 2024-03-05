@@ -1,8 +1,16 @@
+
+
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+
 
 import 'package:resposive/view/widget/All%20Expenses/allextenses.dart';
 
 import 'package:resposive/view/widget/customdraweriteam.dart';
+import 'package:resposive/view/widget/three/income.dart';
+import 'package:resposive/view/widget/three/mycardandlasttransantion.dart';
 
 class DeskTopLayOut extends StatelessWidget {
   const DeskTopLayOut({super.key});
@@ -18,17 +26,34 @@ class DeskTopLayOut extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(flex: 1, child: Income())
+        Expanded(flex: 1, child: incomeandcard())
       ],
     );
   }
 }
 
-class Income extends StatelessWidget {
-  const Income({super.key});
+// ignore: camel_case_types
+class incomeandcard extends StatelessWidget {
+  const incomeandcard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return Column(
+      children: [
+        MycardAndTransaction(),
+        SizedBox(height: 24,),
+        Expanded(child: Income())
+      ],
+    );
   }
 }
+
+
+
+
+
+
+
+
