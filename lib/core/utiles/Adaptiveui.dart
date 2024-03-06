@@ -14,9 +14,9 @@ class AdaptiveUi extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
     return LayoutBuilder(builder: (context, Constraints) {
-      if (Constraints.maxWidth < 600) {
+      if (Constraints.maxWidth < 800) {
         return MobileLauyOut(context);
-      } else if (Constraints.maxWidth < 900) {
+      } else if (Constraints.maxWidth < 1200) {
         return TabletLayOut(context);
       } else {
         return DeskTopLayOut(context);
