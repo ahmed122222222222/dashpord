@@ -4,6 +4,7 @@ import 'package:resposive/core/utiles/Adaptiveui.dart';
 import 'package:resposive/model/Listtielincomemodel.dart';
 
 import 'package:resposive/view/widget/Tabletlayout.dart';
+import 'package:resposive/view/widget/customdraweriteam.dart';
 
 import 'package:resposive/view/widget/desktoplayout.dart';
 import 'package:resposive/view/widget/mobile.dart';
@@ -16,9 +17,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+   GlobalKey<ScaffoldState> globalKey=GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: globalKey,
+      appBar: MediaQuery.of(context).size.width <800?AppBar(
+        leading: IconButton(onPressed: () { 
+           globalKey.currentState!.openDrawer();     
+      
+         }, icon: Icon(Icons.menu),),
+      ):null,
+      drawer: MediaQuery.of(context).size.width <800?CustomDrawer():null,
       body: AdaptiveUi(
           MobileLauyOut: (context) => Mobilelayout(
                 r: [

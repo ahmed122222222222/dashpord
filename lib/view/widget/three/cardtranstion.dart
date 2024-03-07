@@ -3,7 +3,7 @@ import 'package:resposive/model/TransactionModel.dart';
 import 'package:resposive/view/widget/three/lasttiellasttrantion.dart';
 
 class CardTransaction extends StatelessWidget {
-  const CardTransaction({
+  const CardTransaction( {
     super.key,
     required this.transactionModel,
   });

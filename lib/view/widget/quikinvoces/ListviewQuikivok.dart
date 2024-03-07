@@ -37,7 +37,8 @@ class ListviewQuikivok extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 80,
-      child: ListView.builder(
+      child: 
+      ListView.builder(
           itemCount: iteam.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => IntrinsicWidth(

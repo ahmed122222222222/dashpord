@@ -1,8 +1,12 @@
+
+
+
 import 'package:flutter/material.dart';
+
 import 'package:resposive/model/Listtielincomemodel.dart';
 import 'package:resposive/view/widget/three/Headerincome.dart';
-import 'package:resposive/view/widget/three/Listtielincome.dart';
-import 'package:resposive/view/widget/three/chart.dart';
+
+import 'package:resposive/view/widget/three/incomebody.dart';
 
 class Income extends StatefulWidget {
   const Income({super.key});
@@ -41,25 +45,12 @@ class _IncomeState extends State<Income> {
       children: [
         const Headerincome(),
         Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Expanded(child: ChartIncome()),
-              Expanded(
-                  child: Column(
-                children: [
-                  Expanded(
-                      child: ListView.builder(
-                          itemCount: r.length,
-                          itemBuilder: (context, index) {
-                            return Listtielincome(l: r[index]);
-                          }))
-                ],
-              ))
-            ],
-          ),
+          child: Incomebody(r: r),
         )
       ],
     );
   }
 }
+
+
+

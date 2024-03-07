@@ -1,6 +1,7 @@
 
 
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -22,11 +23,25 @@ class DeskTopLayOut extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(flex: 3, child: CustomAllexpense()),
-        SizedBox(
-          width: 24,
-        ),
-        Expanded(flex: 1, child: incomeandcard())
+        Expanded(
+          flex: 4,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+               hasScrollBody: false,
+                child: Row(
+            children: [
+                Expanded(flex: 3, child: CustomAllexpense()),
+          SizedBox(
+            width: 24,
+          ),
+          Expanded(flex: 1, child: incomeandcard())
+            ],
+          ),
+              )
+            ],
+          )
+        )
       ],
     );
   }
