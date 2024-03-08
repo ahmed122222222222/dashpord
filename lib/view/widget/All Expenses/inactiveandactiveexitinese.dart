@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:resposive/core/utiles/styelse.dart';
 import 'package:resposive/model/Allexpensiseiteammodel.dart';
 import 'package:resposive/view/widget/All%20Expenses/headeractiveandnotactive.dart';
@@ -16,7 +18,7 @@ class Inactive extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -24,26 +26,35 @@ class Inactive extends StatelessWidget {
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allexpensiseiteammodel.titel,
-              style: AppStyles.styleSemiBold16(context)
-                  .copyWith(color: Colors.white),
+            FittedBox (
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allexpensiseiteammodel.titel,
+                style: AppStyles.styleSemiBold16(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 9,
             ),
-            Text(
-              allexpensiseiteammodel.date,
-              style: AppStyles.styleRegular14(context)
-                  .copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allexpensiseiteammodel.date,
+                style: AppStyles.styleRegular14(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 9,
             ),
-            Text(
-              allexpensiseiteammodel.price,
-              style: AppStyles.styleSemiBold24(context)
-                  .copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allexpensiseiteammodel.price,
+                style: AppStyles.styleSemiBold24(context)
+                    .copyWith(color: Colors.white),
+              ),
             )
           ],
         ),
@@ -66,7 +77,7 @@ class actve extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: const Color(0xffF1F1F1))),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

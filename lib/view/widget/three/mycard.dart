@@ -25,8 +25,10 @@ class mycard extends StatelessWidget {
               padding: EdgeInsets.only(right: 12.0),
               child: Twotext(),
             ),
-            SizedBox(
-              height: 20,
+           Flexible(
+              child: SizedBox(
+                height: 20,
+              ),
             )
           ],
         ),

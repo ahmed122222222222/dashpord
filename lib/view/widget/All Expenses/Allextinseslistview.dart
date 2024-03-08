@@ -43,7 +43,7 @@ class _AllextEnsiveListViewState extends State<AllextEnsiveListView> {
             .map((e) => Expanded(
                 child: e.key == 1
                     ? Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
                         child: GestureDetector(
                             onTap: () {
                               setState(() {
